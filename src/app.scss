@@ -95,7 +95,10 @@ input {
 }
 
 @media only screen and (max-width: 480px) {
+  .header {
+    position: relative;
+  }
   .container {
-    padding-top: 320px;
+    padding-top: 0px;
   }
 }
