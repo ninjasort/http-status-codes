@@ -1,0 +1,23 @@
+{
+  "name": "http-status-codes",
+  "version": "0.1.0",
+  "description": "http status codes",
+  "main": "dist/app.js",
+  "author": "Cameron J Roe <cameronjroe@gmail.com> (http://cameronjroe.com/)",
+  "devDependencies": {
+    "6to5ify": "latest",
+    "browserify": "latest",
+    "debowerify": "latest",
+    "grunt": "latest",
+    "grunt-6to5": "latest",
+    "grunt-browserify": "latest",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^0.18.0",
+    "load-grunt-tasks": "latest",
+    "node-bourbon": "^1.2.3",
+    "reactify": "latest"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
+  }
+}

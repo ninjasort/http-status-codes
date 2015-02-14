@@ -1,0 +1,95 @@
+@import "bourbon";
+
+* {
+  @include box-sizing(border-box);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Proxima Nova', sans-serif;
+  line-height: 1.5;
+  background-color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.search {
+  margin-top: 1.5em;
+}
+input {
+  text-align: left;
+  min-width: 400px;
+  border: 1px solid #444;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  background: #fff;
+  border: 1px solid #444;
+  box-shadow: inset 0px 0px 5px 0px rgba(171, 171, 171, 0.19);
+  color: #444;
+  &:focus {
+    border: 1px solid blue;
+    outline: 0;
+  }
+}
+
+.header {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  background-color: yellow;
+  box-shadow: 0px 0px 10px 0px rgba(16, 16, 16, 0.64);
+  padding: 2em;
+  h1 {
+    font-size: 2.5em;
+    margin: 0.5em;
+  }
+  a {
+    text-decoration: underline;
+  }
+  p {
+    margin: 0;
+  }
+}
+.container {
+  padding-top: 250px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.http-status-code__list {
+  padding: 0;
+  margin: 0;
+}
+.status-code__item {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  background-color: #fff;
+  padding: 2em 4em;
+  box-shadow: 0px 0px 10px 0px rgba(16, 16, 16, 0.64);
+  margin: 2em;
+  text-align: center;
+  h3 {
+    margin: 0.2em;
+    font-size: 3em;
+  }
+  p {
+    margin: 0.5em;
+    a {
+      color: #888;
+    }
+  }
+}
