@@ -27,7 +27,7 @@ a {
 }
 input {
   text-align: left;
-  min-width: 400px;
+  min-width: 100%;
   border: 1px solid #444;
   padding: 0.75em 1.5em;
   font-size: 1em;
@@ -91,5 +91,11 @@ input {
     a {
       color: #888;
     }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding-top: 320px;
   }
 }
