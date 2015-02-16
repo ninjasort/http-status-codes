@@ -1,2 +1,4 @@
 # http-status-codes
-search http status codes - written in react & es6
+Search HTTP status codes - written with React, ES6, Browserify
+
+A simple search example using React components and Node's EventEmitter.

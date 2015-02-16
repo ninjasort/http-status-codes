@@ -24964,8 +24964,8 @@ var Search = React.createClass({
 
 });
 
-var Component = React.createClass({
-  displayName: "Component",
+var CodeList = React.createClass({
+  displayName: "CodeList",
 
 
   filterItems: function filterItems(query) {
@@ -25045,7 +25045,7 @@ var Component = React.createClass({
 });
 
 React.render(React.createElement(Search, null), document.querySelector(".search"));
-React.render(React.createElement(Component, null), document.querySelector(".status-codes"));
+React.render(React.createElement(CodeList, null), document.querySelector(".status-codes"));
 
 
 },{"events":"/Users/cameronjroe/Dropbox/_projects/http-status-codes/node_modules/browserify/node_modules/events/events.js","http":"/Users/cameronjroe/Dropbox/_projects/http-status-codes/node_modules/browserify/node_modules/http-browserify/index.js","react":"/Users/cameronjroe/Dropbox/_projects/http-status-codes/node_modules/react/react.js"}]},{},["/Users/cameronjroe/Dropbox/_projects/http-status-codes/src/app.js"]);
