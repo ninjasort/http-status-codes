@@ -1,6 +1,6 @@
 {
   "name": "http-status-codes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "http status codes",
   "main": "dist/app.js",
   "author": "Cameron J Roe <cameronjroe@gmail.com> (http://cameronjroe.com/)",
