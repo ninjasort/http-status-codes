@@ -4,20 +4,29 @@
   "description": "http status codes",
   "main": "dist/app.js",
   "author": "Cameron J Roe <cameronjroe@gmail.com> (http://cameronjroe.com/)",
+  "scripts": {
+    "watch": "gulp watch",
+    "dist": "gulp dist"
+  },
   "devDependencies": {
-    "6to5ify": "latest",
+    "babel": "^5.5.4",
+    "babelify": "^6.1.2",
     "browserify": "latest",
     "debowerify": "latest",
-    "grunt": "latest",
-    "grunt-6to5": "latest",
-    "grunt-browserify": "latest",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^0.18.0",
-    "load-grunt-tasks": "latest",
-    "node-bourbon": "^1.2.3",
-    "reactify": "latest"
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.11.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-webserver": "^0.9.1",
+    "jshint-stylish": "^2.0.0",
+    "node-bourbon": "^4.2.3",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "react": "^0.12.2"
+    "flux": "^2.0.3",
+    "react": "^0.13.3"
   }
 }
