@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react/addons';
 import AppStore from '../stores/AppStore';
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 function getAppState() {
   return AppStore.getAll();
@@ -48,7 +49,9 @@ export default class CodeList extends React.Component {
     return (
       <div>
         <ul className="http-status-code__list">
-          {items}
+          <ReactCSSTransitionGroup transitionName="fade">
+            {items}
+          </ReactCSSTransitionGroup>
         </ul>
       </div>
     );
