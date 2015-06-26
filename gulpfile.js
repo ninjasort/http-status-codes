@@ -75,7 +75,6 @@ gulp.task('build:npm', function () {
  */
 gulp.task('default', ['lint','styles'], function () {
   return browserify(config.componentEntry)
-    .transform(babelify)
     .bundle()
     .on('error', function (err) {
       console.log(err);
