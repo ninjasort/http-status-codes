@@ -2,10 +2,9 @@ import React from 'react';
 import AppActions from '../actions/AppActions';
 
 export default class Search extends React.Component {
-
+  
   constructor(props) {
     super(props);
-    
     this.state = {
       query: ''
     };

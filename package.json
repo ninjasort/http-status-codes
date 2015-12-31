@@ -3,34 +3,41 @@
   "version": "0.1.1",
   "description": "http status codes",
   "main": "dist/app.js",
-  "author": "Cameron J Roe <cameronjroe@gmail.com> (http://cameronjroe.com/)",
   "scripts": {
     "watch": "gulp watch",
     "dist": "gulp dist"
   },
-  "devDependencies": {
-    "babel": "^5.5.4",
-    "babelify": "^6.1.2",
-    "browserify": "latest",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.1.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-jshint": "^1.11.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.1",
-    "gulp-uglify": "^1.2.0",
-    "gulp-webserver": "^0.9.1",
-    "jshint-stylish": "^2.0.0",
-    "node-bourbon": "^4.2.3",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "flux": "^2.0.3",
-    "react": "^0.13.3"
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-react-jsx"
+    ]
   },
   "browserify": {
     "transform": [
       "babelify"
     ]
+  },
+  "dependencies": {
+    "flux": "^2.0.3",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-plugin-transform-react-jsx": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "latest",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-webserver": "^0.9.1",
+    "node-bourbon": "^4.2.3",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
