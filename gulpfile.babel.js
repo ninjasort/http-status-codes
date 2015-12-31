@@ -56,5 +56,5 @@ gulp.task('default', ['styles', 'html'], () => {
  */
 gulp.task('watch', ['default'], () => {
   gulp.watch([config.stylesWatch, config.componentWatch], ['default']);
-  return gulp.src('.').pipe(server());
+  return gulp.src('./dist').pipe(server());
 });
