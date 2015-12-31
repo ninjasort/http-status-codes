@@ -22,10 +22,13 @@ a {
   text-decoration: none;
   color: #000;
 }
+main {
+  width: 100%;
+}
 
 input {
-  min-width: 100%;
-  width: 500px;
+  width: 100%;
+  max-width: 450px;
   padding: 0.75em 1.5em;
   text-align: left;
   font-size: 1em;
@@ -47,7 +50,7 @@ input {
 .header {
   position: fixed;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -70,7 +73,9 @@ input {
   }
 }
 .search {
-  margin-top: 1.5em;
+  margin: 1.5em auto 0 auto;
+  max-width: 500px;
+  width: 100%;
 }
 .http-status-code__list {
   position: relative;
@@ -85,6 +90,7 @@ input {
   align-items: center;
   padding: 2em 4em;
   margin: 2em;
+  list-style: none;
   box-shadow: 0px 0px 10px 0px rgba(16, 16, 16, 0.64);
   text-align: center;
   background-color: #fff;

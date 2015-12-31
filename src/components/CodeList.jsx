@@ -49,7 +49,7 @@ export default class CodeList extends React.Component {
     return (
       <div>
         <ul className="http-status-code__list">
-          <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={500}>
+          <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={500} transitionLeaveTimeout={0}>
             {items}
           </ReactCSSTransitionGroup>
         </ul>

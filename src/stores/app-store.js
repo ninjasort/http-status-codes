@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import http from 'http';
 import AppDispatcher from '../dispatcher/app-dispatcher';
 import EventEmitter from 'events';
