@@ -1,4 +1,8 @@
-# http-status-codes
-Search HTTP status codes - written with React, ES6, Browserify
 
-A simple search example using React components and Node's EventEmitter.
+# Creating a Http Status Code Search App with React
+
+Learn how to create a Http Status Code Search App with React
+
+[Read the Post](http://velocitycoding.com/2014/09/02/creating-a-3d-card-flip-effect-with-jquery-flipper)
+
+[View the Demo](http://velocitycoding.github.io/http-status-codes)
