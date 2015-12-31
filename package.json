@@ -4,6 +4,7 @@
   "description": "http status codes",
   "main": "dist/app.js",
   "scripts": {
+    "start": "npm run watch",
     "watch": "gulp watch",
     "dist": "gulp dist"
   },
@@ -23,6 +24,7 @@
   "dependencies": {
     "flux": "^2.0.3",
     "react": "^0.14.5",
+    "react-addons-css-transition-group": "^0.14.5",
     "react-dom": "^0.14.5"
   },
   "devDependencies": {
@@ -37,7 +39,6 @@
     "gulp-sass": "^2.0.1",
     "gulp-uglify": "^1.2.0",
     "gulp-webserver": "^0.9.1",
-    "node-bourbon": "^4.2.3",
     "vinyl-source-stream": "^1.1.0"
   }
 }

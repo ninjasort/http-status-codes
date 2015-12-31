@@ -19,20 +19,17 @@ var config = {
 };
 
 /**
- * Styles
+ * Html
  */
-gulp.task('styles', function () {
-  return gulp.src(config.stylesEntry)
-    .pipe(sass({
-      includePaths: require('node-bourbon').includePaths
-    }))
-    .pipe(gulp.dest('./dist/css'));
+gulp.task('html', () => {
+  gulp.src('./index.html')
+    .pipe(gulp.dest('./dist'));
 });
 
 /**
- * Styles Dist
+ * Styles
  */
-gulp.task('build:styles', function () {
+gulp.task('styles', () => {
   return gulp.src(config.stylesEntry)
     .pipe(sass({
       outputStyle: 'compressed'
@@ -44,10 +41,10 @@ gulp.task('build:styles', function () {
 /**
  * Default
  */
-gulp.task('default', ['styles'], function () {
+gulp.task('default', ['styles', 'html'], () => {
   return browserify(config.componentEntry, {extensions: ['.js','.jsx']})
     .bundle()
-    .on('error', function (err) {
+    .on('error', (err) => {
       console.log(err);
     })
     .pipe(source('bundle.js'))
@@ -57,12 +54,7 @@ gulp.task('default', ['styles'], function () {
 /**
  * Watch
  */
-gulp.task('watch', ['default'], function () {
-  gulp.watch([config.stylesWatch, config.componentWatch], ['dist']);
+gulp.task('watch', ['default'], () => {
+  gulp.watch([config.stylesWatch, config.componentWatch], ['default']);
   return gulp.src('.').pipe(server());
 });
-
-/**
- * Dist
- */
-gulp.task('dist', ['default', 'build:styles', 'build:npm']);

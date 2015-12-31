@@ -1,4 +1,4 @@
-@import "bourbon";
+@import "variables"; 
 
 * {
   box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
 
 body {
   font-size: 16px;
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: $font-family;
   line-height: 1.5;
   background-color: #444;
 }
@@ -22,9 +22,6 @@ a {
   color: #000;
 }
 
-.search {
-  margin-top: 1.5em;
-}
 input {
   min-width: 100%;
   width: 500px;
@@ -37,22 +34,28 @@ input {
   box-shadow: inset 0px 0px 5px 0px rgba(171, 171, 171, 0.19);
   color: #444;
   &:focus {
-    border: 1px solid blue;
+    border: 1px solid lighten($header-bg, 10%);
     outline: 0;
   }
 }
-
+.container {
+  max-width: 500px;
+  padding-top: 250px;
+  margin: 0 auto;
+}
 .header {
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(center);
-  @include align-items(center);
-  text-align: center;
-  width: 100%;
   position: fixed;
-  background-color: rgb(114, 154, 230);
-  box-shadow: 0px 0px 10px 0px rgba(16, 16, 16, 0.64);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   padding: 2.5em;
+  margin: 0;
+  text-align: center;
+  background-color: $header-bg;
+  box-shadow: 0px 0px 10px 0px rgba(16, 16, 16, 0.64);
+  z-index: 1;
   h1 {
     font-size: 2.5em;
     color: #fff;
@@ -66,25 +69,25 @@ input {
     margin: 0;
   }
 }
-.container {
-  padding-top: 250px;
-  max-width: 500px;
-  margin: 0 auto;
+.search {
+  margin-top: 1.5em;
 }
 .http-status-code__list {
+  position: relative;
   padding: 0;
   margin: 0;
+  z-index: 0;
 }
 .status-code__item {
-  @include display(flex);
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include align-items(center);
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2em 4em;
-  box-shadow: 0px 0px 10px 0px rgba(16, 16, 16, 0.64);
   margin: 2em;
+  box-shadow: 0px 0px 10px 0px rgba(16, 16, 16, 0.64);
   text-align: center;
+  background-color: #fff;
   h3 {
     margin: 0.2em;
     font-size: 3em;
