@@ -1,5 +1,5 @@
-import AppDispatcher from '../dispatcher/AppDispatcher';
-import AppConstants from '../constants/AppConstants';
+import AppDispatcher from '../dispatcher/app-dispatcher';
+import AppConstants from '../constants/app-constants';
 
 var AppActions = {
 

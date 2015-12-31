@@ -8,12 +8,11 @@ import server from 'gulp-webserver';
 import sass from 'gulp-sass';
 import rename from 'gulp-rename';
 
-var componentName = 'app';
 var config = {
   stylesWatch: './src/styles/**/*.scss',
-  stylesEntry: './src/styles/' + componentName + '.scss',
-  componentWatch: './src/**/*.{jsx, js}',
-  componentEntry: './src/' + componentName + '.jsx'
+  stylesEntry: './src/styles/app.scss',
+  jsWatch: './src/**/*.{jsx, js}',
+  jsEntry: './src/app.jsx'
 };
 
 /**
@@ -32,7 +31,7 @@ gulp.task('styles', () => {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
-    .pipe(rename(componentName + '.min.css'))
+    .pipe(rename('app.min.css'))
     .pipe(gulp.dest('./dist/css'));
 });
 
@@ -40,7 +39,7 @@ gulp.task('styles', () => {
  * Default
  */
 gulp.task('default', ['styles', 'html'], () => {
-  return browserify(config.componentEntry, {extensions: ['.js','.jsx']})
+  return browserify(config.jsEntry, {extensions: ['.js','.jsx']})
     .bundle()
     .on('error', (err) => {
       console.log(err);
@@ -53,6 +52,6 @@ gulp.task('default', ['styles', 'html'], () => {
  * Watch
  */
 gulp.task('watch', ['default'], () => {
-  gulp.watch([config.stylesWatch, config.componentWatch], ['default']);
+  gulp.watch([config.stylesWatch, config.jsWatch], ['default']);
   return gulp.src('./dist').pipe(server());
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import AppStore from '../stores/AppStore';
+import AppStore from '../stores/app-store';
 
 function getAppState() {
   return AppStore.getAll();

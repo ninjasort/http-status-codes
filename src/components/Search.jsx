@@ -1,5 +1,5 @@
 import React from 'react';
-import AppActions from '../actions/AppActions';
+import AppActions from '../actions/app-actions';
 
 export default class Search extends React.Component {
   

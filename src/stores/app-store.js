@@ -1,7 +1,7 @@
 import http from 'http';
-import AppDispatcher from '../dispatcher/AppDispatcher';
+import AppDispatcher from '../dispatcher/app-dispatcher';
 import EventEmitter from 'events';
-import AppConstants from '../constants/AppConstants';
+import AppConstants from '../constants/app-constants';
 
 let AppStore = Object.assign({}, EventEmitter.prototype, {
 
