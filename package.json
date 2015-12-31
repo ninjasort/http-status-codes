@@ -1,7 +1,7 @@
 {
   "name": "http-status-codes",
   "version": "0.1.1",
-  "description": "http status codes",
+  "description": "Learn how to create a Http Status Code Search App with React",
   "main": "dist/app.js",
   "scripts": {
     "start": "npm run watch",
@@ -10,10 +10,8 @@
   },
   "babel": {
     "presets": [
-      "es2015"
-    ],
-    "plugins": [
-      "transform-react-jsx"
+      "es2015",
+      "react"
     ]
   },
   "browserify": {
@@ -29,15 +27,13 @@
   },
   "devDependencies": {
     "babel": "^6.3.26",
-    "babel-plugin-transform-react-jsx": "^6.3.13",
     "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
     "browserify": "latest",
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.5.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.1",
-    "gulp-uglify": "^1.2.0",
     "gulp-webserver": "^0.9.1",
     "vinyl-source-stream": "^1.1.0"
   }

@@ -6,16 +6,14 @@ import source from 'vinyl-source-stream';
 import browserify from 'browserify';
 import server from 'gulp-webserver';
 import sass from 'gulp-sass';
-import concat from 'gulp-concat';
 import rename from 'gulp-rename';
-import uglify from 'gulp-uglify';
 
 var componentName = 'app';
 var config = {
-    stylesWatch: './src/styles/**/*.scss',
-    stylesEntry: './src/styles/' + componentName + '.scss',
-    componentWatch: './src/**/*.{jsx, js}',
-    componentEntry: './src/' + componentName + '.jsx'
+  stylesWatch: './src/styles/**/*.scss',
+  stylesEntry: './src/styles/' + componentName + '.scss',
+  componentWatch: './src/**/*.{jsx, js}',
+  componentEntry: './src/' + componentName + '.jsx'
 };
 
 /**
